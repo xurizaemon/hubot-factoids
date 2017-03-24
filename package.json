@@ -15,10 +15,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-factoids.git"
+    "url": "git://github.com/therealklanni/hubot-factoids.git"
   },
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-factoids/issues"
+    "url": "https://github.com/therealklanni/hubot-factoids/issues"
   },
   "dependencies": {
     "coffee-script": "~1.6"
