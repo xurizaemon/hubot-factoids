@@ -85,6 +85,10 @@ module.exports = (robot) ->
       msg.reply 'Not a factoid'
 
   robot.respond /factoids?/i, (msg) =>
+    url = process.env.HUBOT_BASE_URL or "http://not-yet-set/"
+    msg.reply "#{url.replace /\/$/, ''}/#{robot.name}/factoids"
+
+  robot.respond /all factoids?/i, (msg) =>
     all = @factoids.getAll()
     out = ''
 
