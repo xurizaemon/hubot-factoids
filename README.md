@@ -101,7 +101,7 @@ the factoid key or value.
 
 Output all known factoids in a list.
 
-`hubot: list factoids`
+`hubot: (list|all) factoids`
 
 ### Drop a factoid
 
