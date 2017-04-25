@@ -97,6 +97,11 @@ the factoid key or value.
 
 `hubot: search foobar`
 
+### List all factoids
+
+Output all known factoids in a list.
+
+`hubot: list factoids`
 
 ### Drop a factoid
 
