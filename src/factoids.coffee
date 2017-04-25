@@ -92,8 +92,8 @@ module.exports = (robot) ->
       msg.reply "No factoids defined"
     else
       for f of all
-        out += prefix + f + ': ' + all[f] + "\n"
-      msg.reply "All factoids: \n" + out
+        out += "prefix #{f}: #{all[f]}\n"
+      msg.reply "All factoids: \n#{out}}"
 
   robot.respond /^factoids?/i, (msg) =>
     url = process.env.HUBOT_BASE_URL or "http://not-yet-set/"
