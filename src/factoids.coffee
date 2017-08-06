@@ -95,7 +95,7 @@ module.exports = (robot) ->
         out += "#{f}: #{all[f]}\n"
       msg.reply "All factoids: \n#{out}"
 
-  robot.respond /^factoids?/i, (msg) =>
+  robot.respond /factoids/i, (msg) =>
     url = process.env.HUBOT_BASE_URL or "http://not-yet-set/"
     msg.reply "#{url.replace /\/$/, ''}/#{robot.name}/factoids"
 
