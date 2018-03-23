@@ -9,6 +9,7 @@
 # Configuration:
 #   HUBOT_FACTOID_PREFIX - prefix character to use for retrieving a factoid (! is the default)
 #   HUBOT_BASE_URL - URL of Hubot (ex. http://myhubothost.com:5555/)
+#   HUBOT_RECENT_MENTIONS - if factoid mentioned within <time>, link to that post
 #
 # Commands:
 #   hubot learn <factoid> = <details> - learn a new factoid
@@ -41,7 +42,13 @@ module.exports = (robot) ->
       msg.reply "Not a factoid"
     else
       fact.popularity++
+      // get time of last mention of fact and thread
+      // this might be adapter specific :|
+      console.log 'msg', msg
       to ?= msg.message.user.name
+      // if last mention time is < TIME
+      // get a link to our mention
+      // notify with link
       msg.send "#{to.trim()}: #{fact.value}"
 
   robot.respond new RegExp("[#{prefix}]([\\w\\s-]{2,}\\w)", 'i'), (msg) =>
